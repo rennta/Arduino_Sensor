@@ -6,4 +6,7 @@ C++オブジェクト指向練習用
 ## 使用センサ一覧
 - [HC-SR04](https://akizukidenshi.com/download/ds/sainsmar/hc-sr04_ultrasonic_module_user_guidejohn_b.pdf)
 
-## ファイル構造
+## クラス構造
+- Sensor
+    - Serial_Sensor_Test
+    - HC_SR04
