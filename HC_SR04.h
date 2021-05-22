@@ -1,11 +1,11 @@
 /**************************************************************************************************
- [ Serial_Sensor_Test.h ]
-  - テストクラス
+ [ HC_SR04.h ]
+  - 超音波距離センサ(HC-SR04)クラスヘッダ
   - [ 関数 ]
     - コンストラクタ
-      - Serial_Sensor_Test(HardwareSerial* pSerial);
+      - HC_SR04(int trigger_pin, int input_pin);
     - デストラクタ
-      - ~Serial_Sensor_Test();
+      - ~HC_SR04();
     - センサー値取得関数
       - void GetData(double* pdata);
 
@@ -13,26 +13,25 @@
 
 
 // [ インクルードガード ]
-#ifndef _SERIAL_SENSOR_TEST_H_
-#define _SERIAL_SENSOR_TEST_H_
+#ifndef _HC_SR04_H_
+#define _HC_SR04_H_
 
 
-// [ ライブラリ読み込み ]
+// [ ヘッダファイル読み込み ]
 #include "Sensor.h"
 
 
-// [ 前方宣言 ]
-class HardwareSerial;
-
-
 // [ クラス定義 ]
-class Serial_Sensor_Test : public Sensor{
+class HC_SR04 : public Sensor{
 public:
-    Serial_Sensor_Test(HardwareSerial* pSerial);
-    ~Serial_Sensor_Test();
+    HC_SR04(int trigger_pin, int input_pin);
+    ~HC_SR04();
     void GetData(double* pdata);
 private:
-    HardwareSerial* m_pSerial;
+    const unsigned short int m_TRIGGER_PIN;
+    const unsigned short int m_INPUT_PIN;
+    const unsigned short int m_TRIGGER_TIME;
+    const double m_SPEED_OF_SOUND;
 };
 
 

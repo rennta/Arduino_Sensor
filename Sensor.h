@@ -7,13 +7,16 @@
 
 **************************************************************************************************/
 
+
 // [ インクルードガード ]
 #ifndef _SENSOR_H_
 #define _SENSOR_H_
 
+
 // [ 前方宣言 ]
 class HardwareSerial;
 class Wire;
+
 
 // [ クラス定義 ]
 class Sensor {
@@ -25,5 +28,6 @@ protected:
     unsigned short int m_digital_pin;
     unsigned short int m_analog_pin;
 };
+
 
 #endif
